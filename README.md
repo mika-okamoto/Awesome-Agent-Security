@@ -95,9 +95,18 @@ A typical agent system is composed of (multiple) LLMs and tools, where LLMs serv
     3. OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments [[NeurIPS'24/12](https://os-world.github.io/)]
         1. Screenshot+tree
         2. Workflow, Windows-Workflow, Chrome, GIMP, LibreOffice Calc, LibreOffice Impress, LibreOffice Writer, OS, Thunderbird, VLC, VS Code, Excel, Word, PowerPoint
-    4. AgentBench: Evaluating LLMs as Agents [[ICLR'24/05](https://arxiv.org/abs/2308.03688)]
-    5. AIOS: LLM Agent Operating System [[COLM'25/10](https://arxiv.org/abs/2403.16971)]
-    6. Android
+    4. RiOSWorld: Benchmarking the Risk of Multimodal Computer-Use Agents [[arXiv'25/06](https://arxiv.org/abs/2506.00618)]
+        1. Screenshot+tree
+        2. 13 risk categories (Wrong instruction following, Environment data leakage/corruption)
+        3. Evaluation: Rule-based assessment (max 15 steps)
+        4. Tasks: Workflow, Windows-Workflow, Chrome, GIMP, LibreOffice Calc, LibreOffice Impress, LibreOffice Writer, OS, Thunderbird, VLC, VS Code, Excel, Word, PowerPoint
+    5. OS-Harm: A Benchmark for Measuring Safety of Computer Use Agents [[arXiv'25/06](https://arxiv.org/abs/2506.14866)]
+        1. Screenshot+accessibility tree
+        2. 150 tasks, 3 harm categories: (1) Deliberate user misuse, (2) Prompt injection attacks, (3) Model misbehavior
+        3. Applications: Thunderbird, VS Code, Terminal, Chrome, LibreOffice (Calc/Impress/Writer), and 11 desktop apps
+    6. AgentBench: Evaluating LLMs as Agents [[ICLR'24/05](https://arxiv.org/abs/2308.03688)]
+    7. AIOS: LLM Agent Operating System [[COLM'25/10](https://arxiv.org/abs/2403.16971)]
+    8. Android
         1. AndroidWorld: A Dynamic Benchmarking Environment for Autonomous Agents [[ICLR'25/04](https://github.com/google-research/android_world)]
         2. MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control [[arxiv'24/12](https://mobilesafetybench.github.io/)]
 9. ALFWorld: Aligning Text and Embodied Environments for Interactive Learning [[ICLR'21/05](https://alfworld.github.io/)]
@@ -157,7 +166,13 @@ A typical agent system is composed of (multiple) LLMs and tools, where LLMs serv
         3. Prompt injection detection: uses a BERT classifier as a guardrail
         4. Sandwich Prevention: repeats the user instructions after each function call
         5. Tool filter: restricts LLM itself to a set of tools required to solve a given task, before observing any untrusted data
-13. Some direct-injection benchmarks 
+13. RAS-Eval: A Comprehensive Benchmark for Security Evaluation of LLM Agents in Real-World Environments [[arXiv'25/06](https://arxiv.org/abs/2506.15253)]
+    1. Simple agent framework (agent+tool); 80 test cases, 3,802 attack tasks mapped to 11 CWE categories
+    2. Attack generation: From 29 tools → 58 attack templates (indirect & direct injection)
+    3. Attack methods: Manipulate tool call inputs (kwargs) and outputs (return)
+    4. Multi-format toolkits: JSON, LangGraph, Model Context Protocol (MCP)
+    5. Limitation: Simple framework ≠ real-world scenarios
+14. Some direct-injection benchmarks 
     1. Formalizing and Benchmarking Prompt Injection Attacks and Defenses [[USENIX'24/08](https://arxiv.org/abs/2310.12815)]
         1. Pattern: benign prompts + adversarial prompts
     2. Assessing Prompt Injection Risks in 200+ Custom GPTs [[ICLR Workshop on Secure and Trustworthy Large Language Models'24/05](https://arxiv.org/pdf/2311.11538)]
