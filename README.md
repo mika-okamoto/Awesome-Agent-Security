@@ -409,6 +409,16 @@ Note that injection is an attack method, not an attack goal; one can launch an i
 
 
 
+### Supply Chain Security for Agent Skills
+
+1. SkillFortify: Formal Analysis and Supply Chain Security for Agentic AI Skills [[Zenodo'26](https://doi.org/10.5281/zenodo.18787663)][[github](https://github.com/varun369/skillfortify)]
+    1. Sound static analysis via abstract interpretation over capability lattice
+    2. DY-Skill attacker model (Dolev-Yao adaptation for agent skill supply chains)
+    3. SAT-based dependency resolution with lockfile semantics
+    4. Trust score algebra with formal monotonicity guarantee
+    5. Five theorems with full proofs. F1=96.95%, 0% FP rate on 540-skill benchmark
+
+
 ### System-level Runtime Defense
 
 
