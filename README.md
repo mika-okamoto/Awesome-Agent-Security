@@ -592,6 +592,12 @@ Note that injection is an attack method, not an attack goal; one can launch an i
     3. Services
         1. ChatGPT temporary chat [[website](https://help.openai.com/en/articles/8914046-temporary-chat-faq)]
             1. Temporary Chats won’t appear in your history, and ChatGPT won’t remember anything you talk about. For safety purposes we may still keep a copy for up to 30 days.
+9. **Host-level OS sandboxing and containment**
+    1. Motivation: Constrain host and network actions once the agent can already execute tools or code on a developer workstation. Complements model-centric defenses (guardrails, IFC, planner/executor separation) by reducing the blast radius of arbitrary command execution at the OS layer.
+    2. Hazmat [[github](https://github.com/dredozubov/hazmat)]
+        1. Open-source macOS-native containment layer for AI agents and coding-agent workflows.
+        2. Mechanisms: dedicated macOS user identity for the agent, Seatbelt sandboxing via the kernel `sandbox_init()` API (called from a privileged helper, not `sandbox-exec`), PF firewall anchors, DNS blocklists, backup/rollback.
+        3. TLA+-checked design: nine specs (~44,795 states) covering setup/rollback ordering, seatbelt credential-deny policy, backup safety, version migration, Tier 2/Tier 3 policy equivalence, session-time host permission repairs, harness lifecycle, and helper fd isolation pre-`sandbox_init()`.
 
 
 ### Others
