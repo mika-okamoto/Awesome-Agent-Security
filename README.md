@@ -620,6 +620,7 @@ Note that injection is an attack method, not an attack goal; one can launch an i
 **Tool protection**
 
 1. MCP Safety Audit: LLMs with the Model Context Protocol Allow Major Security Exploits [[arxiv'25/04](https://arxiv.org/abs/2504.03767)]
+2. WalletPrint: Behavioral transaction risk scoring for AI agent wallets — scores proposed transactions against the wallet's own history before signing, flagging new recipients, size outliers, velocity spikes, and unfamiliar contract types with plain-English reason codes. [[github](https://github.com/Loai17/walletprint-sdk)]
 
 **Post-detection defenses**
 
