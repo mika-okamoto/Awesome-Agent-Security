@@ -467,6 +467,10 @@ Note that injection is an attack method, not an attack goal; one can launch an i
         4. Contextual Agent Security: A Policy for Every Purpose [[ACM HotOS'25/05](https://dl.acm.org/doi/10.1145/3713082.3730378)]
             1. Same as Progent. Runtime policy generation based on trusted context data (i.e., Contextual policy) and fine-grained agent sandbox enforcement.
     10. AgentSpec: Customizable Runtime Enforcement for Safe and Reliable LLM Agents [[ICSE'26/04](https://arxiv.org/abs/2503.18666)]
+    11. OWASP Agent Memory Guard: Runtime defense layer for AI agent memory poisoning (OWASP ASI06) [[github](https://github.com/OWASP/www-project-agent-memory-guard)] [[pypi](https://pypi.org/project/agent-memory-guard/)]
+        1. SHA-256 integrity baselines to detect tampered memory entries at read/write time
+        2. Prompt injection and secret leakage detection in agent memory paths
+        3. YAML-defined policy enforcement (block/warn/strip); sub-100µs latency, zero external dependencies
 3. **Identity and privilege management**
     1. Agent identity
         1. Motivation: Visibility to regulators, users (whether they’re interacting with agents or human), runtime monitoring, post-hoc analysis
